@@ -1,0 +1,85 @@
+INSERT INTO SALARIOS (NOME, PROFISSÃO, SALÁRIO)
+VALUES ('Elisângela', 'PROFESSOR', 10000.00),
+       ('Neymar', 'JOGADOR DE FUTEBOL', 38000.00),
+       ('Harry Styles', 'MUSICO', 20000.00),
+       ('Angelina Jolie', 'ATRIZ', 15000.00),
+       ('Roberto Silva', 'ATOR', 5000.00),
+       ('Roberto', 'PROFISSIONAL DE TI', 15000.00),
+       ('Fátima', 'PROFESSOR', 1000.00),
+       ('Lionel Messi', 'JOGADOR DE FUTEBOL',  8.000.00),
+       ('Beyonce', 'MUSICO', 2000.00),
+       ('Denise', 'ATRIZ', 70000.00),
+       ('Jake', 'ATOR', 540000.00),
+       ('Tereza', 'PROFISSIONAL DE TI', 90000.00),
+       ('Carlos', 'PROFESSOR', 1500.00),
+       ('Cristiano Ronaldo', 'JOGADOR DE FUTEBOL', 45000.00),
+       ('Ariana Grande', 'MUSICO', 3500.000),
+       ('Clara', 'ATRIZ', 80000.00),
+       ('James', 'ATOR', 100000.00),
+       ('Heloísa', 'PROFISSIONAL DE TI', 70000.00),
+       ('Aline', 'PROFESSOR', 2000.00),
+       ('Kylian Mbappé', 'JOGADOR DE FUTEBOL', 250000.00),
+       ('Anitta', 'MUSICO', 30000.00),
+       ('Manuely', 'ATRIZ', 100000.00),
+       ('Gabriel', 'ATOR', 300000.00),
+       ('Henrique', 'PROFISSIONAL DE TI', 10800.00),
+       ('Larissa', 'PROFESSOR', 2100.00 );
+
+***************************************************************************
+
+SELECT NOME, SALÁRIO, PROFISSÃO
+FROM SALARIOS
+WHERE PROFISSÃO LIKE 'P%'
+--WHERE PROFISSÃO = 'PROFISSIONAL DE TI';
+
+***************************************************************************
+
+SELECT NOME AS COLABORADOR, SALÁRIO AS DIMDIM, PROFISSÃO AS COM_O_QUE_TRABALHA
+FROM SALARIOS
+WHERE PROFISSÃO LIKE 'P%'
+--WHERE PROFISSÃO = 'PROFISSIONAL DE TI';
+
+***************************************************************************
+
+SELECT COUNT (NOME) AS QTD_PROFESSORES 
+FROM SALARIOS
+-- WHERE PROFISSÃO LIKE 'P%'
+
+***************************************************************************
+
+SELECT *
+FROM SALARIOS
+-- WHERE PROFISSÃO LIKE 'P%
+WHERE PROFISSÃO = 'PROFISSIONAL DE TI' AND 
+      NOME IN ('BILLZINHO DO EXCEL', 'ZÉ DYTE')
+
+****************************************************************************
+
+SELECT AVG(SALÁRIO) AS MEDIA_SALARIOS
+-- O AVG SERVE PARA CALCULAR A MÉDIA.
+FROM SALARIOS
+-- WHERE PROFISSÃO LIKE 'P%
+WHERE PROFISSÃO = 'PROFISSIONAL DE TI' AND 
+      NOME IN ('BILLZINHO DO EXCEL', 'ZÉ DYTE')
+
+****************************************************************************
+
+SELECT MAX(SALÁRIO) AS MAIOR_SAL_TI
+-- O AVG SERVE PARA CALCULARA MÉDIA.
+FROM SALARIOS
+--WHERE PROFISSÃO LIKE 'P%'
+WHERE PROFISSÃO = 'PROFISSIONAL DE TI' AND 
+      NOME IN ('BILLZINHO DO EXCEL', 'ZÉ BYTE')
+
+****************************************************************************
+
+SELECT MAX(SALARIOS) AS MAIOR_SAL_TODOS
+FROM SALARIOS
+WHERE PROFISSÃO IN ('ATOR','PROFESSOR', 'PROFISSIONAL DE TI')
+
+****************************************************************************
+
+
+
+
+
